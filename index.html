@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intellight - i-stoplight</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo Intellight" class="logo">
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Icona menu -->
+    </header>
+
+    <!-- Menu laterale -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="caratteristiche.html">Caratteristiche</a></li>
+            <li><a href="funzionamento.html">Funzionamento</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenuto principale -->
+    <section id="content">
+        <h2>Benvenuto su Intellight</h2>
+        <p>Scopri come il nostro semaforo intelligente sta cambiando la gestione del traffico.</p>
+
+        <!-- Sezione immagini con descrizione -->
+        <div class="image-section">
+            <div class="image-card">
+                <img src="images/semaforo.png" alt="Semaforo intelligente" class="image" style="width: 300px; height: auto;">
+                <p class="image-description">Un semaforo che ottimizza il flusso del traffico in tempo reale.</p>
+            </div>
+            <div class="image-card">
+                <img src="images/telecamera.png" alt="Telecamera di sorveglianza" class="image" style="width: 300px; height: auto;">
+                <p class="image-description">La telecamera monitora il traffico e fornisce i dati per l'ottimizzazione.</p>
+            </div>
+            <div class="image-card">
+                <img src="images/algoritmo.png" alt="Algoritmo intelligente" class="image" style="width: 300px; height: auto;">
+                <p class="image-description">Il nostro algoritmo elabora i dati per migliorare la gestione del traffico.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Intellight - Tutti i diritti riservati.</p>
+    </footer>
+
+    <script>
+        // Funzione per aprire/chiudere il menu
+        function toggleMenu() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* Impostazioni di base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Aggiungiamo questa regola per assicurare che l'altezza dell'intera pagina prenda almeno 100% della viewport */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0073e6;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Logo */
+header .logo {
+    width: 200px;
+    height: auto;
+}
+
+/* Icona per il menu */
+.menu-icon {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1000;
+}
+
+/* Menu laterale */
+nav#sidebar {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background: #333;
+    transition: left 0.3s;
+    z-index: 999;
+}
+
+nav#sidebar.open {
+    left: 0;
+}
+
+nav#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+nav#sidebar ul li {
+    padding: 15px 20px;
+    text-align: center;
+}
+
+nav#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+nav#sidebar ul li a:hover {
+    background-color: #0073e6;
+}
+
+/* Contenuto principale */
+#content {
+    flex-grow: 1;
+    padding: 2rem;
+    background: #fff;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+/* Quando il menu è aperto, sposta il contenuto */
+nav#sidebar.open + #content {
+    margin-left: 200px;
+}
+
+/* Sezione immagini */
+.image-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.image-card {
+    width: 30%;
+    text-align: center;
+}
+
+.image-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.image-description {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #333;
+    font-weight: normal;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    margin-top: auto;
+    width: 100%;
+}
